@@ -6,7 +6,7 @@ import os
 def block_ip(IP):
         cmd='sudo route add '+IP+' reject'
         os.system(cmd)
-        cmd='sudo iptables -I INPUT -s '+IP+' -j DROP > /dev/null 2>&1'
+        cmd='sudo iptables -ِِِِA INPUT -s '+IP+' -j DROP > /dev/null 2>&1'
         os.system(cmd)
         cmd='sudo service iptables save > /dev/null 2>&1'
         os.system(cmd)
